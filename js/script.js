@@ -75,3 +75,12 @@ $(function () {
     glitch2TimeMax: 300,
   });
 });
+
+$(function() {
+    $(".gallery a").magnificPopup({
+        type: "image",
+        gallery: {							//  この部分を追記します  
+            enabled: true,			//  この部分を追記します  
+        },											//  この部分を追記します  
+    });
+});
