@@ -82,13 +82,21 @@ header ul {
     justify-content: center;
     align-items: center;
     height: 50px;
-    gap: 2rem;
+    gap: 25px;
 }
 
 header li {
     font-size: var(--font-size-header);
     font-weight: 600;
     color: var(--color-sub);
+}
+
+header .x-icon {
+    width: 50px;
+}
+
+header .x-icon img {
+    width: 100%;
 }
 
 header a {
@@ -124,16 +132,13 @@ profile_sec  */
     gap: 30px;
 }
 
-.gallery_sec li {
-    transition: .5s;
-}
-
-.gallery_sec li:hover {
-    transform: translate(-10px, -10px);
-}
-
 .gallery_sec li img {
+    transition: .5s;
     border: 3px solid var(--color-sub);
+}
+
+.gallery_sec li img:hover {
+    transform: translate(-10px, -10px);
 }
 
 @media (max-width:800px) {
