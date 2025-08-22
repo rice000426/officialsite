@@ -3,6 +3,7 @@
 :root {
     --color-main: #f5f5f5;
     --color-sub: #f2f5fe;
+    --color-bg: #020001;
 
     --font-size-h2: 50px;
     --font-size-header: 12px;
@@ -20,6 +21,8 @@ img {
 
 body {
     font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    background-color: var(--color-bg);
+    line-height: 1.3;
 }
 
 /* ========================================
@@ -33,8 +36,10 @@ header {
     max-width: 500px;
     width: 100%;
     height: 50px;
-    background-color: rgba(80, 74, 74, 0.4);
+    background-color: rgb(0, 0, 0);
     border-radius: 25px;
+    border: 1px solid var(--color-sub);
+    z-index: 100;
 }
 
 header nav {
@@ -53,14 +58,6 @@ header li {
     font-size: var(--font-size-header);
     font-weight: 600;
     color: var(--color-sub);
-}
-
-header .x-icon {
-    width: 50px;
-}
-
-header .x-icon img {
-    width: 100%;
 }
 
 header a {
@@ -105,6 +102,7 @@ mainvisual_sec  */
     text-align: center;
     font-size: var(--font-size-h2);
     font-weight: 700;
+    
 }
 
 .mainvisual_sec h2 span {

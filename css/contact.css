@@ -4,10 +4,10 @@
     --color-main: #020001;
     --color-sub: #f2f5fe;
 
-    --font-size-h2: 70px;
+    --font-size-h2: 50px;
     --font-size-h3: 30px;
     --font-size-h4: 22px;
-    --font-size-p: 16px;
+    --font-size-p: 14px;
     --font-size-p-800: 14px;
     --font-size-span: 20px;
     --font-size-header: 12px;
@@ -28,7 +28,7 @@ body {
     font-family: "Montserrat", "Noto Sans JP", sans-serif;
     background-color: var(--color-main);
     color: var(--color-sub);
-    line-height: 1.8;
+    line-height: 1.3;
 }
 
 body::before {
@@ -47,9 +47,8 @@ body::before {
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 50px auto 0;
     padding: 0 10%;
-    /* background-color: #5c5c5c; */
 }
 
 @media (max-width: 800px) {
@@ -69,8 +68,9 @@ header {
     max-width: 500px;
     width: 100%;
     height: 50px;
-    background-color: rgba(80, 74, 74, 0.4);
+    background-color: rgb(0, 0, 0);
     border-radius: 25px;
+    border: 1px solid var(--color-sub);
     z-index: 100;
 }
 
@@ -90,14 +90,6 @@ header li {
     font-size: var(--font-size-header);
     font-weight: 600;
     color: var(--color-sub);
-}
-
-header .x-icon {
-    width: 50px;
-}
-
-header .x-icon img {
-    width: 100%;
 }
 
 header a {
@@ -125,6 +117,7 @@ contact_sec  */
     font-weight: 600;
     color: var(--color-sub);
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .contact_sec .contact_content {
@@ -136,11 +129,12 @@ contact_sec  */
 }
 
 .contact_sec .x-icon {
-    width: 20%;
+    width: 10%;
 }
 
 .contact_sec .center-text {
     text-align: center;
+    white-space: nowrap;
 }
 
 .contact_sec .order-template {
@@ -165,6 +159,7 @@ contact_sec  */
     font-size: var(--font-size-h3);
     font-weight: 600;
     text-align: center;
+    white-space: nowrap;
 }
 
 .contact_sec li {
@@ -176,7 +171,6 @@ contact_sec  */
     flex-direction: column;
     gap: 30px;
     align-items: center;
-    background-color: var(--color-main);
 }
 
 .contact_sec .order-flow {
@@ -205,7 +199,7 @@ contact_sec  */
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--color-main);
-    padding: 0 20px;
+    padding: 0 10px;
     font-size: var(--font-size-h4);
     white-space: nowrap;
 }
@@ -226,6 +220,10 @@ contact_sec  */
     .contact_sec .contact_content {
         margin-top: 0;
     }
+
+    .contact_sec h3 {
+        font-size: 20px;
+    }
 }
 
 /* ========================================
@@ -240,4 +238,71 @@ footer p {
     font-size: 12px;
     font-weight: 600;
     color: var(--color-sub);
+}
+
+/* ========================================
+flower  */
+
+.flower {
+    position: fixed;
+    top: -50px;
+    left: 50px;
+    animation: rakka 10s linear infinite, kaiten 3s linear infinite, boya 3s ease-in-out infinite;
+    animation-delay: 1s;
+    z-index: -1;
+    width: 30px;
+}
+
+.flower:nth-of-type(2) {
+    left: initial;
+    right: 50px;
+    animation: rakka 10s linear infinite, kaiten 3s linear infinite, boya 3s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.flower:nth-of-type(3) {
+    left: 10px;
+    animation: rakka 10s linear infinite, kaiten 3s linear infinite, boya 3s ease-in-out infinite;
+    animation-delay: 5s;
+}
+
+.flower:nth-of-type(4) {
+    left: initial;
+    right: 80px;
+    animation: rakka 10s linear infinite, kaiten 3s linear infinite, boya 3s ease-in-out infinite;
+    animation-delay: 8s;
+}
+
+@keyframes rakka {
+    0% {
+        top: -50px;
+    }
+
+    100% {
+        top: 100vh;
+    }
+}
+
+@keyframes kaiten {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes boya {
+    0% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
 }
