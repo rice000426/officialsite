@@ -7,6 +7,7 @@
     --font-size-h2: 50px;
     --font-size-h3: 30px;
     --font-size-h4: 22px;
+    --font-size-h5: 16px;
     --font-size-p: 14px;
     --font-size-p-800: 14px;
     --font-size-span: 20px;
@@ -130,6 +131,7 @@ contact_sec  */
 
 .contact_sec .x-icon {
     width: 10%;
+    min-width: 100px;
 }
 
 .contact_sec .center-text {
@@ -210,6 +212,63 @@ contact_sec  */
 
 .contact_sec .order-flow_box p {
     text-align: center;
+}
+
+.contact_sec .order-flow_box img {
+    width: 50px;
+}
+
+.accordion {
+    border-bottom: 1px solid var(--color-sub);
+    overflow: hidden;
+    max-width: 400px;
+    margin: 20px auto;
+    font-family: sans-serif;
+    font-size: var(--font-size-h5);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-main);
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: 0;
+}
+
+.accordion-header h5 {
+    border-left: 3px solid var(--color-sub);
+    padding-left: 10px;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background-color: var(--color-main);
+  border-top: 1px solid var(--color-sub);
+}
+
+.accordion.open .accordion-content {
+  max-height: 500px;
+  padding: 15px;
+}
+
+#paymentAccordion .accordion-content li,
+#paymentAccordion .accordion-content p {
+    text-align: left;
+}
+
+#paymentAccordion .accordion-content li {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+
+.accordion.open .accordion-content {
+    display: block;
 }
 
 @media (max-width:800px) {

@@ -145,8 +145,13 @@ profile_sec  */
 
 .profile_sec p {
     font-size: var(--font-size-p);
-    margin-top: 2rem;
+    margin: 30px 0;
     text-align: center;
+}
+
+.text-area li {
+    text-align: center;
+    font-size: var(--font-size-p);
 }
 
 @media (max-width:800px) {
@@ -170,7 +175,11 @@ profile_sec  */
 
     .profile_sec p {
         font-size: var(--font-size-p-800);
-        margin-top: 2rem;
+        margin-top: 30px;
+    }
+
+    .text-area li {
+        font-size: var(--font-size-p-800);
     }
 }
 
