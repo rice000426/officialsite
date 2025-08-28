@@ -76,11 +76,17 @@ $(function () {
   });
 });
 
-$(function() {
-    $(".gallery a").magnificPopup({
-        type: "image",
-        gallery: {							//  この部分を追記します  
-            enabled: true,			//  この部分を追記します  
-        },											//  この部分を追記します  
-    });
+// $(function() {
+//     $(".accordion-header").on("click", function() {	// .aをクリックしたら
+//         $(".accordion-content").slideToggle();					// .bを開閉する
+//     });
+// });
+
+const accordion = document.getElementById("paymentAccordion");
+const header = accordion.querySelector(".accordion-header");
+const icon = document.getElementById("accordionIcon");
+
+header.addEventListener("click", () => {
+  accordion.classList.toggle("open");
+  icon.textContent = accordion.classList.contains("open") ? "−" : "＋";
 });
