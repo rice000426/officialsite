@@ -1,56 +1,3 @@
-$(function () {
-  $(".slide").slick({
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: true,
-    centerMode: false,
-    centerPadding: "50px",
-    dots: true,
-    fade: false,
-    cssEase: "ease",
-    infinite: true,
-    pauseOnFocus: true,
-    pauseOnHover: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 1000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false
-        }
-      }
-    ]
-  });
-});
-;
-
-$(function () {
-  $('.btn-trigger').on('click', function () {
-    $(this).toggleClass('active');
-    return false;
-  });
-});
-
 // https://github.com/hmongouachon/mgGlitch
 
 $(function () {
@@ -74,6 +21,15 @@ $(function () {
     // set max time for glitch 2 elem
     glitch2TimeMax: 300,
   });
+});
+
+$(function() {
+    $(".gallery a").magnificPopup({
+        type: "image",
+        gallery: {							//  この部分を追記します  
+            enabled: true,			//  この部分を追記します  
+        },											//  この部分を追記します  
+    });
 });
 
 // $(function() {
